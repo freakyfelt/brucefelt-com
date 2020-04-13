@@ -1,19 +1,39 @@
-'use strict'
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`
+})
+
+function getString(key, opts = {}) {
+  const val = process.env[key]
+  if (typeof val === 'string') {
+    return val
+  }
+
+  if (typeof opts.default !== 'undefined') {
+    return opts.default
+  }
+
+  throw new TypeError(`Expected env to have key ${key}`)
+}
+
+const SITE_URL = getString('SITE_URL', {
+  default: 'http://localhost'
+})
 
 module.exports = {
   siteMetadata: {
-    title: 'gatsby-starter-typescript-plus',
-    description: 'A starter kit for TypeScript-based Gatsby projects with sensible defaults.',
-    keywords: 'gatsbyjs, gatsby, javascript, sample, something',
-    siteUrl: 'https://gatsby-starter-typescript-plus.netlify.com',
+    title: 'The Felt Facade',
+    description: 'Base site for Bruce Felt, a software engineer based in Berlin, Germany',
+    keywords: 'gatsbyjs, gatsby, javascript, typescript, ruby, aws, contentful',
+    siteUrl: SITE_URL,
     author: {
-      name: 'Resi Respati',
-      url: 'https://twitter.com/resir014',
-      email: 'resir014@gmail.com'
+      name: 'Bruce Felt',
+      url: SITE_URL,
+      github: 'freakyfelt',
+      twitter: 'freakyfelt',
+      linkedIn: 'brucefelt'
     }
   },
-  plugins: [
-    {
+  plugins: [{
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'content',
@@ -23,8 +43,7 @@ module.exports = {
     {
       resolve: 'gatsby-transformer-remark',
       options: {
-        plugins: [
-          {
+        plugins: [{
             resolve: 'gatsby-remark-responsive-iframe',
             options: {
               wrapperStyle: 'margin-bottom: 1rem'
@@ -48,7 +67,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-canonical-urls',
       options: {
-        siteUrl: 'https://gatsby-starter-typescript-plus.netlify.com'
+        siteUrl: SITE_URL
       }
     },
     'gatsby-plugin-emotion',

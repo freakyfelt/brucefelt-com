@@ -28,7 +28,7 @@ interface PageTemplateProps {
 }
 
 const PageTemplate: React.FC<PageTemplateProps> = ({ data }) => (
-  <IndexLayout>
+  <IndexLayout title={data.markdownRemark.frontmatter.title}>
     <Page>
       <Container>
         <h1>{data.markdownRemark.frontmatter.title}</h1>
