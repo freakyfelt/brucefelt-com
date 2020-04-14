@@ -1,12 +1,35 @@
 import * as React from 'react'
-
+import { graphql } from 'gatsby'
+import styled from '@emotion/styled'
 import Page from '../components/Page'
 import Container from '../components/Container'
 import IndexLayout from '../layouts'
 import SocialLink from '../components/SocialLink'
 import { ExternalLink } from '../components/Links'
 
-const IndexPage = () => (
+const AsideRight = styled.aside`
+  float: right;
+`
+
+export const query = graphql`
+  query IndexPage {
+    contentfulAsset(title: { eq: "Self" }) {
+      resize(width: 400) {
+        src
+      }
+    }
+  }
+`
+
+interface QueryData {
+  contentfulAsset: {
+    resize: {
+      src: string
+    }
+  }
+}
+
+const IndexPage: React.FC<{ data: QueryData }> = ({ data }) => (
   <IndexLayout>
     <Page>
       <Container>
@@ -18,6 +41,10 @@ const IndexPage = () => (
         </p>
 
         <h2>Who am I?</h2>
+
+        <AsideRight>
+          <img src={data.contentfulAsset.resize.src} width="250" alt="Bruce (2018)" />
+        </AsideRight>
 
         <p>
           I’m Bruce, a software engineer currently based out of Berlin, Germany. I grew up in Nebraska and moved to Seattle in 2012 for

@@ -33,7 +33,15 @@ module.exports = {
       linkedIn: 'brucefelt'
     }
   },
-  plugins: [{
+  plugins: [
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
+      }
+    },
+    {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'content',
@@ -43,7 +51,8 @@ module.exports = {
     {
       resolve: 'gatsby-transformer-remark',
       options: {
-        plugins: [{
+        plugins: [
+          {
             resolve: 'gatsby-remark-responsive-iframe',
             options: {
               wrapperStyle: 'margin-bottom: 1rem'

@@ -88,7 +88,7 @@ const SocialLink: React.FC<Props> = ({ to, blank, display }) => {
   const withText = [undefined, 'full', 'text'].includes(display)
 
   return (
-    <ExternalLink href={url} title={title} blank={blank}>
+    <ExternalLink href={url} title={title} blank={blank} nowrap>
       {withIcon && <Icon icon={icon} />}
       {withText && ` ${displayTitle}`}
     </ExternalLink>

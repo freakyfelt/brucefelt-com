@@ -1,5 +1,3 @@
-'use strict'
-
 const path = require('path')
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
@@ -18,7 +16,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       let slug = permalink
 
       if (!slug) {
-        slug = `/${relativePath.replace('.md', '')}/`
+        slug = `/${(relativePath || '').replace('.md', '')}/`
       }
 
       // Used to generate URL to view this content.
