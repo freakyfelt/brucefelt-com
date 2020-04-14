@@ -16,7 +16,11 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       let slug = permalink
 
       if (!slug) {
-        slug = `/${(relativePath || '').replace('.md', '')}/`
+        // We probably hit a non-filesystem markdown node
+        if (!relativePath) {
+          return
+        }
+        slug = `/${relativePath.replace('.md', '')}/`
       }
 
       // Used to generate URL to view this content.
