@@ -1,5 +1,7 @@
 /* eslint-disable max-len */
 
+import { lighten } from 'polished'
+
 export const colors = {
   brand: '#0f4c81',
   ui: {
@@ -8,6 +10,7 @@ export const colors = {
     whisper: '#fbfafc'
   },
   text: {
+    light: lighten(0.2, '#2b3542'),
     base: '#2b3542'
   },
   green: {
@@ -60,7 +63,18 @@ export const dimensions = {
     regular: 1.45,
     heading: 1.2
   },
-  containerPadding: 1.5
+  containerPadding: 1.5,
+  padding: {
+    smY: 0.25,
+    smX: 0.5,
+    mdY: 0.375,
+    mdX: 0.75,
+    lgY: 0.5,
+    lgX: 1.0
+  },
+  margin: {
+    mdY: 1.2
+  }
 }
 
 export const heights = {

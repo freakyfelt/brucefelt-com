@@ -5,11 +5,12 @@ import { StaticQuery, graphql } from 'gatsby'
 import 'modern-normalize'
 import '../styles/normalize'
 
-import Header from '../components/Header'
-import LayoutRoot from '../components/LayoutRoot'
-import LayoutMain from '../components/LayoutMain'
-import Footer from '../components/Footer'
+import Header from '../components/layout/Header'
+import LayoutRoot from '../components/layout/LayoutRoot'
+import LayoutMain from '../components/layout/LayoutMain'
+import Footer from '../components/layout/Footer'
 import Banner from '../components/Banner'
+import Breadcrumb, { Crumb } from '../components/layout/Breadcrumb'
 
 interface StaticQueryProps {
   site: {
@@ -23,6 +24,7 @@ interface StaticQueryProps {
 
 interface Props {
   title?: string
+  breadcrumbs?: Crumb[]
 }
 
 const query = graphql`
@@ -36,7 +38,7 @@ const query = graphql`
   }
 `
 
-const IndexLayout: React.FC<Props> = ({ children, title }) => (
+const IndexLayout: React.FC<Props> = ({ children, breadcrumbs, title }) => (
   <StaticQuery
     query={query}
     render={(data: StaticQueryProps) => (
@@ -56,6 +58,7 @@ const IndexLayout: React.FC<Props> = ({ children, title }) => (
         <Banner>
           <p>Welcome! Still getting things set up after swapping from Wordpress</p>
         </Banner>
+        {breadcrumbs && <Breadcrumb crumbs={breadcrumbs} />}
         <LayoutMain>{children}</LayoutMain>
         <Footer />
       </LayoutRoot>

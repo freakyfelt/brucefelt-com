@@ -4,7 +4,7 @@ import { Icon } from '@iconify/react'
 import githubIcon from '@iconify/icons-ant-design/github'
 import twitterIcon from '@iconify/icons-ant-design/twitter'
 import linkedInIcon from '@iconify/icons-ant-design/linkedin'
-import { ExternalLink } from './Links'
+import { ExternalLink } from './core/Links'
 
 const githubUrl = (user: string): string => `https://github.com/${user}`
 const linkedInUrl = (user: string): string => `https://linkedin.com/in/${user}`

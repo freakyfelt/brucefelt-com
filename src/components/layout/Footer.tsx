@@ -2,9 +2,10 @@ import React from 'react'
 import styled from '@emotion/styled'
 import { transparentize } from 'polished'
 import { Link } from 'gatsby'
-import { heights, dimensions, colors } from '../styles/variables'
-import Container from './Container'
-import SocialLink from './SocialLink'
+import { heights, dimensions, colors } from '../../styles/variables'
+import Container from '../Container'
+import SocialLink from '../SocialLink'
+import { aboutUrl } from '../core/routes'
 
 const StyledFooter = styled.footer`
   height: ${heights.footer}px;
@@ -44,12 +45,12 @@ const NavList = styled.ul`
 const Footer: React.FC = () => (
   <StyledFooter>
     <FooterInner>
-      <NavList>
+      <NavList role="navigation">
         <li>
-          <Link to="/contact">Contact me</Link>
+          <Link to={aboutUrl}>About</Link>
         </li>
       </NavList>
-      <NavList>
+      <NavList role="navigation" aria-label="Social Links">
         <li>
           <SocialLink to="github" display="icon" blank />
         </li>
