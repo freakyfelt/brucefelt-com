@@ -4,6 +4,7 @@ import Page from '../components/Page'
 import Container from '../components/Container'
 import IndexLayout from '../layouts'
 import SocialLink from '../components/SocialLink'
+import { ExternalLink } from '../components/Links'
 
 const IndexPage = () => (
   <IndexLayout>
@@ -37,10 +38,10 @@ const IndexPage = () => (
         <h2>Job Opportunities</h2>
 
         <p>
-          Right now I'm not actively looking as I'm happy with my current gig at [Contentful](https://contentful.com), but I'm always
-          keeping an eye out for interesting challenges. I've worked in companies of all sizes and have been able to make a positive impact
-          on their processes and ways of working, so it comes down to looking at what your current needs are, if I'm looking to change
-          things up, and if we match.
+          Right now I'm not actively looking as I'm happy with my current gig at{' '}
+          <ExternalLink href="https://contentful.com">Contentful</ExternalLink>, but I'm always keeping an eye out for interesting
+          challenges. I've worked in companies of all sizes and have been able to make a positive impact on their processes and ways of
+          working, so it comes down to looking at what your current needs are, if I'm looking to change things up, and if we match.
         </p>
 
         <p>

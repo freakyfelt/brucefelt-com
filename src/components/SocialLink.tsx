@@ -4,6 +4,7 @@ import { Icon } from '@iconify/react'
 import githubIcon from '@iconify/icons-ant-design/github'
 import twitterIcon from '@iconify/icons-ant-design/twitter'
 import linkedInIcon from '@iconify/icons-ant-design/linkedin'
+import { ExternalLink } from './Links'
 
 const githubUrl = (user: string): string => `https://github.com/${user}`
 const linkedInUrl = (user: string): string => `https://linkedin.com/in/${user}`
@@ -58,9 +59,15 @@ const configs = {
 interface Props {
   to: keyof typeof configs
   display?: 'icon' | 'text' | 'full'
+  /**
+   * Whether to set target to a new window.
+   *
+   * @default false
+   */
+  blank?: boolean
 }
 
-const SocialLink: React.FC<Props> = ({ to, display }) => {
+const SocialLink: React.FC<Props> = ({ to, blank, display }) => {
   const data: StaticQueryProps = useStaticQuery(graphql`
     query SocialLinks {
       site {
@@ -81,10 +88,10 @@ const SocialLink: React.FC<Props> = ({ to, display }) => {
   const withText = [undefined, 'full', 'text'].includes(display)
 
   return (
-    <a href={url} title={title} target="_blank" rel="noopener noreferrer">
+    <ExternalLink href={url} title={title} blank={blank}>
       {withIcon && <Icon icon={icon} />}
       {withText && ` ${displayTitle}`}
-    </a>
+    </ExternalLink>
   )
 }
 

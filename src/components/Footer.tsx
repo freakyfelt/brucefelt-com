@@ -51,13 +51,13 @@ const Footer: React.FC = () => (
       </NavList>
       <NavList>
         <li>
-          <SocialLink to="github" display="icon" />
+          <SocialLink to="github" display="icon" blank />
         </li>
         <li>
-          <SocialLink to="twitter" display="icon" />
+          <SocialLink to="twitter" display="icon" blank />
         </li>
         <li>
-          <SocialLink to="linkedIn" display="icon" />
+          <SocialLink to="linkedIn" display="icon" blank />
         </li>
       </NavList>
     </FooterInner>
