@@ -9,6 +9,7 @@ import Header from '../components/Header'
 import LayoutRoot from '../components/LayoutRoot'
 import LayoutMain from '../components/LayoutMain'
 import Footer from '../components/Footer'
+import Banner from '../components/Banner'
 
 interface StaticQueryProps {
   site: {
@@ -52,6 +53,9 @@ const IndexLayout: React.FC<Props> = ({ children, title }) => (
           ]}
         />
         <Header title={data.site.siteMetadata.title} />
+        <Banner>
+          <p>Welcome! Still getting things set up after swapping from Wordpress</p>
+        </Banner>
         <LayoutMain>{children}</LayoutMain>
         <Footer />
       </LayoutRoot>

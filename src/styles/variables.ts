@@ -2,23 +2,27 @@
 
 export const colors = {
   brand: '#0f4c81',
-  accent: '#ed6663',
-  almostBlack: '#1b262c',
-  success: '#37b635',
-  warning: '#ec1818',
   ui: {
     bright: '#e0d6eb',
     light: '#f5f3f7',
     whisper: '#fbfafc'
   },
-  code: '#fcf6f0',
-  gray: {
-    dark: 'hsla(270, 17.119554496%, 0%, 0.92)',
-    copy: 'hsla(270, 15.797828016000002%, 0%, 0.88)',
-    calm: 'rgba(0, 0, 0, 0.54)'
+  text: {
+    light: '#1b262c',
+    base: '#161925'
   },
-  white: '#fff',
-  black: '#1b262c'
+  green: {
+    light: '#b9e3c6'
+  },
+  blue: {
+    base: '#0f4c81'
+  },
+  gray: {
+    calm: '#1b262c',
+    dark: 'rgba(0, 0, 0, 0.54)'
+  },
+  white: '#ffffff',
+  black: '#000000'
 }
 
 export const fonts = {

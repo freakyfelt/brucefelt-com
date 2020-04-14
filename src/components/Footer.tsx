@@ -9,7 +9,7 @@ import SocialLink from './SocialLink'
 const StyledFooter = styled.footer`
   height: ${heights.footer}px;
   padding: 0 ${dimensions.containerPadding}rem;
-  background-color: ${colors.almostBlack};
+  background-color: ${colors.gray.calm};
   color: ${transparentize(0.5, colors.white)};
 `
 

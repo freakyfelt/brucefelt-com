@@ -22,14 +22,14 @@ export default `
     overflow-x: hidden;
     overflow-y: scroll;
     font-family: ${fonts.sansSerif};
-    color: ${colors.black};
-    background-color: ${colors.white};
+    color: ${colors.text.base};
+    background-color: ${colors.ui.whisper};
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
   }
 
   a {
-    color: ${colors.brand};
+    color: ${colors.blue.base};
     text-decoration: none;
 
     &:hover,
@@ -86,7 +86,7 @@ export default `
   h1, h2, h3, h4, h5, h6 {
     margin-top: 1.414rem;
     margin-bottom: .5rem;
-    color: ${colors.black};
+    color: ${colors.text.base};
     font-weight: 600;
     line-height: ${dimensions.lineHeight.heading};
     text-rendering: optimizeLegibility;
@@ -144,7 +144,7 @@ export default `
     margin: .8rem 0;
     padding: .5rem 1rem;
     border-left: .25rem solid ${colors.ui.light};
-    color: ${colors.gray.calm};
+    color: ${colors.gray.dark};
 
     p {
       &:last-child {
