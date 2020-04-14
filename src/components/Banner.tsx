@@ -6,7 +6,6 @@ import Container from './Container'
 const StyledBanner = styled.div`
   padding: 0 ${dimensions.containerPadding}rem;
   background-color: ${colors.green.light};
-  color: ${colors.text.light};
 `
 
 const BannerInner = styled(Container)`

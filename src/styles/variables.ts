@@ -8,8 +8,7 @@ export const colors = {
     whisper: '#fbfafc'
   },
   text: {
-    light: '#1b262c',
-    base: '#161925'
+    base: '#2b3542'
   },
   green: {
     light: '#b9e3c6'
