@@ -10,6 +10,7 @@ export type Crumb = [Label] | [Path, Label]
 
 const StyledContainer = styled(Container)`
   margin-top: ${dimensions.margin.mdY}rem;
+  padding: 0 ${dimensions.containerPadding}rem;
 `
 
 const StyledList = styled.ol`
