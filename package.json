@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^13.4.0",
+    "@contentful/rich-text-types": "^15.13.2",
     "@emotion/core": "^10.0.10",
     "@emotion/styled": "^10.0.12",
     "@iconify/icons-ant-design": "^1.0.7",

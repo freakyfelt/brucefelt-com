@@ -1,11 +1,13 @@
-import React from 'react'
 import styled from '@emotion/styled'
-import { transparentize } from 'polished'
+
+import React from 'react'
 import { Link } from 'gatsby'
+import { transparentize } from 'polished'
+
+import SocialLink from '../../../components/SocialLink'
+import { aboutUrl } from '../../routes'
 import { heights, dimensions, colors } from '../../styles/variables'
-import Container from '../Container'
-import SocialLink from '../SocialLink'
-import { aboutUrl } from '../core/routes'
+import { Container } from './Container'
 
 const StyledFooter = styled.footer`
   height: ${heights.footer}px;

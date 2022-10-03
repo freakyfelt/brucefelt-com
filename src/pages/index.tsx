@@ -1,8 +1,7 @@
 import * as React from 'react'
-import Page from '../components/Page'
-import Container from '../components/Container'
-import IndexLayout from '../layouts'
-import RecentPostsWidget from '../components/blog/RecentPostsWidget'
+
+import IndexLayout, { Container, Page } from '../core/layouts'
+import { RecentPostsWidget } from '../features/blog'
 
 const IndexPage: React.FC = () => (
   <IndexLayout title="Home">

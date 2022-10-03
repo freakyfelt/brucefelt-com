@@ -2,7 +2,7 @@ const path = require('path')
 
 const createBlogPostPages = async ({ graphql, actions }) => {
   const { createPage } = actions
-  const blogPost = path.resolve('./src/templates/post.tsx')
+  const blogPost = path.resolve('./src/features/blog/templates/post.tsx')
 
   const allBlogPosts = await graphql(`
     {

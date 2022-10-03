@@ -1,11 +1,12 @@
-import * as React from 'react'
 import styled from '@emotion/styled'
-import { transparentize } from 'polished'
-import { Link } from 'gatsby'
 
+import * as React from 'react'
+import { Link } from 'gatsby'
+import { transparentize } from 'polished'
+
+import { postsUrl, aboutUrl, homeUrl } from '../../routes'
 import { heights, dimensions, colors } from '../../styles/variables'
-import Container from '../Container'
-import { postsUrl, aboutUrl, homeUrl } from '../core/routes'
+import { Container } from './Container'
 
 const StyledHeader = styled.header`
   height: ${heights.header}px;

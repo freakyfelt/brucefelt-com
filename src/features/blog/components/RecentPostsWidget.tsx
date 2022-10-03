@@ -7,31 +7,20 @@ const query = graphql`
   query RecentPostsWidget {
     allContentfulBlogPost(limit: 5, sort: { fields: publishDate, order: DESC }) {
       nodes {
-        id
-        title
-        slug
-        tags
-        publishDate
-        description {
-          childMarkdownRemark {
-            html
-          }
-        }
+        ...BlogPost
       }
     }
   }
 `
 
-interface Data {
+interface Query {
   allContentfulBlogPost: {
     nodes: BlogPost[]
   }
 }
 
-const RecentPostsWidget: React.FC = () => {
-  const data: Data = useStaticQuery(query)
+export const RecentPostsWidget: React.FC = () => {
+  const data = useStaticQuery<Query>(query)
 
-  return <PostList posts={data.allContentfulBlogPost.nodes} />
+  return <PostList posts={data.allContentfulBlogPost.nodes} header='h3' />
 }
-
-export default RecentPostsWidget

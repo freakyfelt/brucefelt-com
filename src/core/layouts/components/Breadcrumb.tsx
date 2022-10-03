@@ -1,8 +1,10 @@
-import React from 'react'
-import { Link } from 'gatsby'
 import styled from '@emotion/styled'
+
+import { Link } from 'gatsby'
+import React from 'react'
+
 import { dimensions } from '../../styles/variables'
-import Container from '../Container'
+import { Container } from './Container'
 
 type Label = string
 type Path = string

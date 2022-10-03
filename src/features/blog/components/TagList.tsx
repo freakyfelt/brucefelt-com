@@ -1,6 +1,8 @@
-import React from 'react'
 import styled from '@emotion/styled'
-import { dimensions } from '../../styles/variables'
+
+import React from 'react'
+
+import { dimensions } from '../../../core/styles/variables'
 
 const StyledList = styled.ul`
   list-style: none;

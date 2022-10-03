@@ -1,7 +1,9 @@
-import React from 'react'
 import styled from '@emotion/styled'
-import { colors, dimensions } from '../styles/variables'
-import Container from './Container'
+
+import React from 'react'
+
+import { colors, dimensions } from '../../styles/variables'
+import { Container } from './Container'
 
 const StyledBanner = styled.div`
   padding: 0 ${dimensions.containerPadding}rem;
