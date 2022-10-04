@@ -114,3 +114,7 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+# Cypress
+cypress/screenshots
+cypress/videos

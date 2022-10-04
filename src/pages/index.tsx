@@ -14,7 +14,7 @@ const IndexPage: React.FC = () => (
           occasionally comments/posts on other topics.
         </p>
 
-        <h2>Recent Posts</h2>
+        <h2 data-testId="h-recent">Recent Posts</h2>
         <RecentPostsWidget />
       </Container>
     </Page>

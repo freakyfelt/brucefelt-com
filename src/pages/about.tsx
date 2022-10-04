@@ -37,7 +37,7 @@ const IndexPage: React.FC = () => {
     <IndexLayout title="About" breadcrumbs={[['/', 'Home'], ['About']]}>
       <Page>
         <Container>
-          <h1>Who am I?</h1>
+          <h1 data-testId="h-whoami">Who am I?</h1>
 
           <AsideRight>
             <img src={data.contentfulAsset.resize.src} width="200" alt="Bruce circa 2018" />
