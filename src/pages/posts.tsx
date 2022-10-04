@@ -28,7 +28,7 @@ const PostsIndex: React.FC = () => {
     <IndexLayout title="Blog" breadcrumbs={[['/', 'Home'], ['Blog']]}>
       <Page>
         <Container>
-          <h1>Blog Posts</h1>
+          <h1 data-testId="h-posts">Blog Posts</h1>
 
           <PostList posts={data.allContentfulBlogPost.nodes} />
         </Container>

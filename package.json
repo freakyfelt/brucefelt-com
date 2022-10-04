@@ -12,12 +12,15 @@
   "scripts": {
     "build": "gatsby build",
     "clean": "rimraf public",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public",
     "dev": "gatsby develop",
     "format": "prettier --write \"src/**/*.{ts,tsx,md}\"",
     "lint": "eslint 'src/**/*.{ts,tsx}'",
     "start": "npm run dev",
     "test": "npm run type-check && npm run lint",
+    "test:e2e": "start-server-and-test dev http://localhost:8000 cy:open",
     "type-check": "tsc"
   },
   "engines": {
@@ -61,6 +64,7 @@
     "typescript": "^3.5.2"
   },
   "devDependencies": {
+    "@testing-library/cypress": "^8.0.3",
     "@types/classnames": "^2.2.8",
     "@types/luxon": "^1.22.0",
     "@types/node": "^12.0.10",
@@ -69,12 +73,14 @@
     "@types/react-helmet": "^5.0.8",
     "@typescript-eslint/eslint-plugin": "^2.6.0",
     "@typescript-eslint/parser": "^2.6.0",
+    "cypress": "^10.9.0",
     "eslint": "^6.6.0",
     "eslint-config-blvd": "^1.0.0",
     "eslint-config-prettier": "^6.5.0",
     "eslint-plugin-prettier": "^3.1.1",
     "gh-pages": "^2.0.1",
     "prettier": "^1.18.2",
-    "rimraf": "^2.6.3"
+    "rimraf": "^2.6.3",
+    "start-server-and-test": "^1.14.0"
   }
 }
